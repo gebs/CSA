@@ -8,6 +8,7 @@ namespace Uebung2_Events
 {
     public delegate void MyEventHandler(object sender, MyEventArgs e);
 
+
     class Program
     {
         public Program()

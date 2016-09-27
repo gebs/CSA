@@ -10,12 +10,9 @@ namespace Uebung2_Events
     {
         public EventConsumer(EventProducer ep)
         {
-            ep.MyEvent += Ep_MyEvent;    
+            ep.MyEvent += (s,e)=> { Console.WriteLine(e.EventData); };
         }
 
-        private void Ep_MyEvent(object sender, MyEventArgs e)
-        {
-            Console.WriteLine(e.EventData);
-        }
+
     }
 }
