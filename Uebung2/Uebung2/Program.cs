@@ -16,6 +16,8 @@ namespace Uebung2
             StringList sl = new StringList();
             sl.Size = 5;
 
+            Console.WriteLine($"Size: {sl.Size}");
+
             sl.Data[1] = "Some Value";
             sl.Data[3] = "Another Value";
 
