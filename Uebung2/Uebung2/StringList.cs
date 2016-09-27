@@ -10,7 +10,7 @@ namespace Uebung2
     {
         private int size;
         public int Size
-        {
+        { 
             get { return size; }
             set
             {
