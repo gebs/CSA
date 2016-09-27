@@ -8,14 +8,13 @@ namespace Uebung2
 {
     public class StringList
     {
-        private int size;
+       
         public int Size
         { 
-            get { return size; }
+            get { return Data.Length; }
             set
-            {
-                size = value;
-                Data = new string[size];
+            { 
+                Data = new string[value];
             }
         }
 
