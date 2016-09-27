@@ -41,9 +41,10 @@
             this.checkBoxNegative.Enabled = false;
             this.checkBoxNegative.Location = new System.Drawing.Point(53, 27);
             this.checkBoxNegative.Name = "checkBoxNegative";
+            this.checkBoxNegative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBoxNegative.Size = new System.Drawing.Size(58, 21);
             this.checkBoxNegative.TabIndex = 0;
-            this.checkBoxNegative.Text = "neg.";
+            this.checkBoxNegative.Text = ".neg";
             this.checkBoxNegative.UseVisualStyleBackColor = true;
             // 
             // textBoxAbsValue
