@@ -43,11 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonRunParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonRunParameters.designer.cs">
+      <DependentUpon>CommonRunParameters.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsoleView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
     <Compile Include="ConsoleView.designer.cs">
       <DependentUpon>ConsoleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveCtrlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DriveCtrlView.designer.cs">
+      <DependentUpon>DriveCtrlView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DriveView.designer.cs">
+      <DependentUpon>DriveView.cs</DependentUpon>
     </Compile>
     <Compile Include="LedView.cs">
       <SubType>usercontrol</SubType>
@@ -55,7 +73,19 @@
     <Compile Include="LedView.designer.cs">
       <DependentUpon>LedView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MotorCtrlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MotorCtrlView.designer.cs">
+      <DependentUpon>MotorCtrlView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadarView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadarView.designer.cs">
+      <DependentUpon>RadarView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,11 +106,26 @@
     <None Include="Ressources\LedOn.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CommonRunParameters.resx">
+      <DependentUpon>CommonRunParameters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsoleView.resx">
       <DependentUpon>ConsoleView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DriveCtrlView.resx">
+      <DependentUpon>DriveCtrlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriveView.resx">
+      <DependentUpon>DriveView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LedView.resx">
       <DependentUpon>LedView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotorCtrlView.resx">
+      <DependentUpon>MotorCtrlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadarView.resx">
+      <DependentUpon>RadarView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
