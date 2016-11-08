@@ -12,6 +12,7 @@ namespace RobotView
     public partial class ConsoleView : UserControl
     {
         private RobotCtrl.RobotConsole console;
+
         public ConsoleView()
         {
             InitializeComponent();
@@ -27,17 +28,18 @@ namespace RobotView
             set
             {
                 console = value;
+                if (console != null)
+                {
+                    this.ledview1.Led = console[Leds.Led1];
+                    this.ledview2.Led = console[Leds.Led2];
+                    this.ledview3.Led = console[Leds.Led3];
+                    this.ledview4.Led = console[Leds.Led4];
 
-                this.ledview1.Led = console[Leds.Led1];
-                this.ledview2.Led = console[Leds.Led2];
-                this.ledview3.Led = console[Leds.Led3];
-                this.ledview4.Led = console[Leds.Led4];
-
-                this.switchview1.Myswitch = console[Switches.Switch1];
-                this.switchview2.Myswitch = console[Switches.Switch2];
-                this.switchview3.Myswitch = console[Switches.Switch3];
-                this.switchview4.Myswitch = console[Switches.Switch4];
-
+                    this.switchview1.Myswitch = console[Switches.Switch1];
+                    this.switchview2.Myswitch = console[Switches.Switch2];
+                    this.switchview3.Myswitch = console[Switches.Switch3];
+                    this.switchview4.Myswitch = console[Switches.Switch4];
+                }
 
             }
         }

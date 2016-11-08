@@ -15,9 +15,10 @@ namespace TestMotor
         public Form1()
         {
             InitializeComponent();
+            this.driveControl.DriveCtrl = new DriveCtrl(Constants.IODriveCtrl);
             this.motorright.MotorCtrl = new MotorCtrl(Constants.IOMotorCtrlRight);
             this.motorleft.MotorCtrl = new MotorCtrl(Constants.IOMotorCtrlLeft);
-            this.driveControl.DriveCtrl = new DriveCtrl(Constants.IODriveCtrl);
+           
         }
     }
 }

@@ -29,21 +29,21 @@ namespace RobotView
         /// <summary>
         /// Liefert bzw. setzt das Radar-Objekt
         /// </summary>
-        public Radar Radar { get; set; }
+       // public Radar Radar { get; set; }
         #endregion
 
 
         #region methods
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (Radar != null)
+           /* if (Radar != null)
             {
                 this.label1.Text = "Distanz: " + Radar.Distance.ToString("0.00") + " m";
                 int value = (int)(Radar.Distance * 100);
                 if (value > 255) value = 255;
                 if (value < 0) value = 0;
                 this.progressBar1.Value = value;
-            }
+            }*/
         }
         #endregion
     }

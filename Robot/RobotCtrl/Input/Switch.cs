@@ -89,7 +89,7 @@ namespace RobotCtrl
         /// Diese Methode informiert alle registrierten Eventhandler über den Zustandswechsel 
         /// (ein-/ausgeschaltet) des Schalters.
         /// </summary>
-        public void OnSwitchStateChanged(SwitchEventArgs e) => SwitchStateChanged.Invoke(this, e);
+        public void OnSwitchStateChanged(SwitchEventArgs e) => SwitchStateChanged?.Invoke(this, e);
 
         #endregion
 
