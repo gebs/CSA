@@ -32,6 +32,8 @@ namespace RobotView
             this.upDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnChangeAcceleration = new System.Windows.Forms.Button();
+            this.btnChangeSpeed = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label16
@@ -49,14 +51,14 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownAcceleration.Location = new System.Drawing.Point(215, 50);
+            this.upDownAcceleration.Location = new System.Drawing.Point(241, 46);
             this.upDownAcceleration.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
             this.upDownAcceleration.Name = "upDownAcceleration";
-            this.upDownAcceleration.Size = new System.Drawing.Size(75, 24);
+            this.upDownAcceleration.Size = new System.Drawing.Size(75, 28);
             this.upDownAcceleration.TabIndex = 20;
             this.upDownAcceleration.Value = new decimal(new int[] {
             300,
@@ -71,14 +73,14 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownSpeed.Location = new System.Drawing.Point(215, 20);
+            this.upDownSpeed.Location = new System.Drawing.Point(241, 16);
             this.upDownSpeed.Maximum = new decimal(new int[] {
             8000,
             0,
             0,
             0});
             this.upDownSpeed.Name = "upDownSpeed";
-            this.upDownSpeed.Size = new System.Drawing.Size(75, 24);
+            this.upDownSpeed.Size = new System.Drawing.Size(75, 28);
             this.upDownSpeed.TabIndex = 21;
             this.upDownSpeed.Value = new decimal(new int[] {
             500,
@@ -102,17 +104,35 @@ namespace RobotView
             this.label18.Size = new System.Drawing.Size(172, 20);
             this.label18.Text = "Speed (+ mm/s)";
             // 
+            // btnChangeAcceleration
+            // 
+            this.btnChangeAcceleration.Location = new System.Drawing.Point(188, 46);
+            this.btnChangeAcceleration.Name = "btnChangeAcceleration";
+            this.btnChangeAcceleration.Size = new System.Drawing.Size(47, 28);
+            this.btnChangeAcceleration.TabIndex = 24;
+            this.btnChangeAcceleration.Text = "+/-";
+            // 
+            // btnChangeSpeed
+            // 
+            this.btnChangeSpeed.Location = new System.Drawing.Point(188, 16);
+            this.btnChangeSpeed.Name = "btnChangeSpeed";
+            this.btnChangeSpeed.Size = new System.Drawing.Size(47, 28);
+            this.btnChangeSpeed.TabIndex = 25;
+            this.btnChangeSpeed.Text = "+/-";
+            // 
             // CommonRunParameters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btnChangeSpeed);
+            this.Controls.Add(this.btnChangeAcceleration);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.upDownAcceleration);
             this.Controls.Add(this.upDownSpeed);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Name = "CommonRunParameters";
-            this.Size = new System.Drawing.Size(301, 84);
+            this.Size = new System.Drawing.Size(319, 84);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +144,7 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownSpeed;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnChangeAcceleration;
+        private System.Windows.Forms.Button btnChangeSpeed;
     }
 }

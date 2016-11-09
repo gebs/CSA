@@ -69,6 +69,27 @@ namespace RobotView
         public CommonRunParameters()
         {
             InitializeComponent();
+            this.btnChangeSpeed.Click += BtnChangeSpeed_Click;
+            this.btnChangeAcceleration.Click += BtnChangeAcceleration_Click;
+
+        }
+
+        private void BtnChangeAcceleration_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard();
+            if (nk.ShowDialog() == DialogResult.OK) {
+                this.Acceleration = (float)nk.FormValue;
+            }
+           
+        }
+
+        private void BtnChangeSpeed_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                this.Speed = (float)nk.FormValue;
+            }
         }
         #endregion
 
