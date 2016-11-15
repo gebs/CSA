@@ -35,6 +35,7 @@ namespace TestDrive
             
             Init();
             radarView.Radar = robot.Radar;
+            radarView.TooClose += RadarView_TooClose;
             consoleView1.Console = robot.RobotConsole;
 
             commonRunParameters1.AccelerationChanged += AccelerationChanged;
@@ -44,6 +45,11 @@ namespace TestDrive
             AccelerationChanged(null, EventArgs.Empty); // Default Wert setzen
             this.buttonHalt.Click += ButtonHalt_Click;
             this.buttonStop.Click += ButtonStop_Click;
+        }
+
+        private void RadarView_TooClose(object sender, EventArgs e)
+        {
+            robot.Drive.Stop();
         }
 
         private void ButtonStop_Click(object sender, EventArgs e)

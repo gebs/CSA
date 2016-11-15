@@ -52,15 +52,6 @@ namespace RobotCtrl
 
 
         /// <summary>
-        /// Liefert den Radar des Roboters
-        /// </summary>
-        //public Radar Radar
-        //{
-        //    get { return this.radar; }
-        //}
-
-
-        /// <summary>
         /// Liefert den Antrieb des Roboters
         /// </summary>
         public Drive Drive

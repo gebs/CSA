@@ -17,6 +17,7 @@ namespace RobotView
 {
     public partial class RadarView : UserControl
     {
+        public event EventHandler TooClose;
         #region constructor & destructor
         public RadarView()
         {
@@ -29,7 +30,7 @@ namespace RobotView
         /// <summary>
         /// Liefert bzw. setzt das Radar-Objekt
         /// </summary>
-       public Radar Radar { get; set; }
+        public Radar Radar { get; set; }
         #endregion
 
 
@@ -42,6 +43,10 @@ namespace RobotView
                 int value = (int)(Radar.Distance * 100);
                 if (value > 255) value = 255;
                 if (value < 0) value = 0;
+
+                if (value < 200)
+                    TooClose?.Invoke(null, null);
+
                 this.progressBar1.Value = value;
             }
         }
