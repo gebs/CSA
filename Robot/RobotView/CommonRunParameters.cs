@@ -78,7 +78,7 @@ namespace RobotView
         {
             NumericKeyBoard nk = new NumericKeyBoard();
             if (nk.ShowDialog() == DialogResult.OK) {
-                this.Acceleration = (float)nk.FormValue;
+                this.Acceleration = (float)nk.FormValue / 1000;
             }
            
         }
@@ -88,7 +88,7 @@ namespace RobotView
             NumericKeyBoard nk = new NumericKeyBoard();
             if (nk.ShowDialog() == DialogResult.OK)
             {
-                this.Speed = (float)nk.FormValue;
+                this.Speed = (float)nk.FormValue / 1000;
             }
         }
         #endregion
