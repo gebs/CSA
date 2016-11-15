@@ -45,6 +45,17 @@ namespace RobotView
         public RunTurnView()
         {
             InitializeComponent();
+            this.button1.Click += Button1_Click;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard(Convert.ToDouble(this.npAngle.Value));
+            nk.MaxValue = Convert.ToDouble(this.npAngle.Maximum);
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                this.npAngle.Value = (decimal)nk.FormValue;
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)

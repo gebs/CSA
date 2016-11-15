@@ -44,7 +44,7 @@ namespace RobotView
                 if (value > 255) value = 255;
                 if (value < 0) value = 0;
 
-                if (value < 200)
+                if (value < 20)
                     TooClose?.Invoke(null, null);
 
                 this.progressBar1.Value = value;

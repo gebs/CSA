@@ -45,9 +45,32 @@ namespace RobotView
         public RunArcView()
         {
             InitializeComponent();
+            this.button1.Click += Button1_Click;
+            this.button2.Click += Button2_Click;
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard(Convert.ToDouble(this.npRadius.Value));
+            nk.MaxValue = Convert.ToDouble(this.npRadius.Maximum);
 
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                this.npRadius.Value = (decimal)nk.FormValue;
+            }
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard(Convert.ToDouble(this.npAngle.Value));
+            nk.MaxValue = Convert.ToDouble(this.npAngle.Maximum);
+
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                this.npAngle.Value = (decimal)nk.FormValue;
+            }
+        }
 
         private void btnStart_Click_1(object sender, EventArgs e)
         {

@@ -10,16 +10,28 @@ namespace RobotView
 {
     public partial class NumericKeyBoard : Form
     {
-        public double FormValue { get; set; }
-        public NumericKeyBoard()
+        private double formvalue;
+        public double FormValue
+        {
+            get
+            {
+                return MaxValue != 0 ? (formvalue <= MaxValue ? formvalue : MaxValue) : formvalue;
+            }
+            set { formvalue = value; }
+        }
+        public double MaxValue { get; set; }
+        public NumericKeyBoard(double _formvalue)
         {
             InitializeComponent();
+            this.formvalue = _formvalue;
 
             foreach (Control item in Controls)
             {
                 if (item.GetType() == typeof(Button))
                     item.Click += Item_Click;
             }
+            if (formvalue != 0)
+                this.txtDisplay.Text = formvalue.ToString();
 
         }
         private void Item_Click(object sender, EventArgs e)

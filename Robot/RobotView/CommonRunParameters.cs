@@ -76,7 +76,9 @@ namespace RobotView
 
         private void BtnChangeAcceleration_Click(object sender, EventArgs e)
         {
-            NumericKeyBoard nk = new NumericKeyBoard();
+            NumericKeyBoard nk = new NumericKeyBoard(this.Acceleration * 1000);
+            nk.MaxValue = Convert.ToDouble(this.upDownAcceleration.Maximum);
+
             if (nk.ShowDialog() == DialogResult.OK) {
                 this.Acceleration = (float)nk.FormValue / 1000;
             }
@@ -85,7 +87,8 @@ namespace RobotView
 
         private void BtnChangeSpeed_Click(object sender, EventArgs e)
         {
-            NumericKeyBoard nk = new NumericKeyBoard();
+            NumericKeyBoard nk = new NumericKeyBoard(this.Speed * 1000);
+            nk.MaxValue = Convert.ToDouble(this.upDownSpeed.Maximum);
             if (nk.ShowDialog() == DialogResult.OK)
             {
                 this.Speed = (float)nk.FormValue / 1000;

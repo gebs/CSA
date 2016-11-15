@@ -46,6 +46,19 @@ namespace RobotView
         public RunLineView()
         {
             InitializeComponent();
+            this.button1.Click += Button1_Click;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            NumericKeyBoard nk = new NumericKeyBoard(Convert.ToDouble(this.npDistance.Value));
+            nk.MaxValue = Convert.ToDouble(this.npDistance.Maximum);
+
+
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+               this.npDistance.Value = (decimal)nk.FormValue;
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
