@@ -27,10 +27,16 @@ namespace RobotView
             Button btn = (Button)sender;
             string display = this.txtDisplay.Text;
 
-          
 
-            if (!string.IsNullOrEmpty(display) && !display.StartsWith("."))
-                FormValue = double.Parse(display);
+            try
+            {
+                if (!string.IsNullOrEmpty(display) && !display.StartsWith("."))
+                    FormValue = double.Parse(display);
+            }
+            catch (Exception ex)
+            {
+                FormValue = 0;
+            }
 
             switch (btn.Tag.ToString())
             {
