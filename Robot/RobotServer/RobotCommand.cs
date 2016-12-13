@@ -33,6 +33,7 @@ namespace RobotServer
             rc.ValueL = this.ValueL;
             rc.Timestamp = this.Timestamp;
             rc.Status = this.Status;
+            rc.Positions = this.Positions;
             return rc;
         }
     }
