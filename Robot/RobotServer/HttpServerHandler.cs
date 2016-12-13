@@ -9,7 +9,15 @@ namespace RobotServer
 {
     public class HttpServerHandler
     {
-        private const string html = "<html><head><title>Beste Gruppe</title></head><body>$$Log</body></html>";
+        private const string html = @"<html>
+                                    <head>
+                                        <title>Beste Gruppe</title>
+                                    </head>
+                                    <body>
+                                        <h1>Eve Meier & Adrian Gebs</h1><br>
+                                        $$Log
+                                    </body>
+                                    </html>";
         private TcpClient client;
 
         public HttpServerHandler(TcpClient client)

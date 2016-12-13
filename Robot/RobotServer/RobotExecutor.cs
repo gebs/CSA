@@ -10,7 +10,7 @@ namespace RobotServer
     public class RobotExecutor
     {
         //List<RobotCommand> commands { get; set; } = new List<RobotCommand>();
-        
+
 
         public RobotExecutor(List<RobotCommand> _commands)
         {
@@ -41,12 +41,16 @@ namespace RobotServer
                     case Command.Start:
                         AppData.Drive.Power = false;
                         break;
-                    default:    
+                    default:
                         break;
                 }
 
-                while (!AppData.Drive.Done) { }
-        //        Thread.Sleep(100);
+                while (!AppData.Drive.Done)
+                {
+                    Thread.Sleep(200);
+                    item.Positions.Add(AppData.Drive.DriveInfo.Position);
+                }
+                //        Thread.Sleep(100);
                 item.Status = Status.Done;
             }
         }
