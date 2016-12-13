@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace RobotServer
+{
+    public class RobotCommand : ICloneable
+    {
+        public Command CMD { get; set; }
+        public int ValueA { get; set; }
+        public double ValueL { get; set; }
+        public DateTime Timestamp { get; set; }
+        public Status Status { get; set; } = Status.Open;
+
+        public RobotCommand()
+        {
+            Timestamp = DateTime.Now;
+        }
+        public string getHTML()
+        {
+            return $"{Timestamp.ToString("dd.MM.yyyy hh:mm:ss")}&emsp;{CMD.ToString()}&emsp;{ValueA}&emsp;{ValueL}";
+        }
+
+        public object Clone()
+        {
+            RobotCommand rc = new RobotCommand();
+            rc.CMD = this.CMD;
+            rc.ValueA = this.ValueA;
+            rc.ValueL = this.ValueL;
+            rc.Timestamp = this.Timestamp;
+            rc.Status = this.Status;
+            return rc;
+        }
+    }
+}
