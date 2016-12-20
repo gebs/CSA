@@ -21,7 +21,7 @@ namespace RobotServer
         }
         public string getHTML()
         {
-            return $"{Timestamp.ToString("dd.MM.yyyy hh:mm:ss")}&emsp;{CMD.ToString()}&emsp;{ValueA}&emsp;{ValueL}&emsp;Positions:<br>&emsp;" 
+            return $"{Timestamp.ToString("dd.MM.yyyy hh:mm:ss")}&emsp;<b>{CMD.ToString()}</b>&emsp;{ValueA}&emsp;{ValueL}&emsp;Positions:<br>&emsp;" 
                         + string.Join("<br>&emsp;", Positions.Select(x=> $"&emsp;x: {x.X.ToString("#0.00000000")}&emsp;y:&emsp;{x.Y.ToString("#0.000000000")}&emsp;angle: {x.Angle.ToString("#0.00")}").ToArray());
         }
 
